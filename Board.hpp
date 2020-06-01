@@ -1,12 +1,4 @@
-/**
- * Header file for the board of the war game.
- * 
- * You can copy this file to a new file called Board.hpp, and extend it as you like.
- * 
- * @author Oz Levi 
- * @author Erel Segal-Halevi
- * @since  2020-05
- */
+#pragma once
 
 #include <string>
 #include <vector>
@@ -49,12 +41,6 @@ class Board {
     
     ~Board()
     {
-      for (auto row: board) {
-		 		for (auto soldier: row) {
-		 			if (soldier)
-		 				delete soldier;
-		 		}
-		 	}
       board.clear();
     }
 };

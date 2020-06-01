@@ -1,4 +1,3 @@
-#pragma once
 /**
  * This is a game that demonstrates how to use the Board class.
  * You can modify it and build your own games.
@@ -13,6 +12,8 @@
 namespace WarGame {
 	class DemoGame {
 	 private:
+	 	const int numRows = 8;
+		const int numCols = 8;
 		Board board;
 	 public:
 

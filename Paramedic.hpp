@@ -5,23 +5,21 @@
 using namespace std;
 
 namespace WarGame {
-class FootSoldier : public Soldier{
+class Paramedic : public Soldier{
     public: 
-   FootSoldier(){}
-      ~FootSoldier(){
+   Paramedic(){}
+      ~Paramedic(){
    }
-
- 
-FootSoldier(int t) {
+Paramedic(int t) {
  const int health=100;  
- damage=10;
+ //damage=0;
  life=100;
  team =t;
 }
 
 void attack(std::vector<std::vector<Soldier*>>& board ,pair <int,int> loction);
  void fullAttack(std::vector<std::vector<Soldier*>>& board ,pair <int,int> loction) override;
-pair<int,int> CloserSoldier(std::vector<std::vector<Soldier*>>& board,pair <int,int> loction);
+std::vector <Soldier*> FindFriends(std::vector<std::vector<Soldier*>>& board,pair <int,int> loction);
 
 
 
